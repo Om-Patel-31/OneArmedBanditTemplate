@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 
@@ -28,6 +29,11 @@ namespace OneArmedBandit
             int reel1 = rangen.Next(1, 4);
             int reel2 = rangen.Next(1, 4);
             int reel3 = rangen.Next(1, 4);
+
+            for (int i = 0; i < 10; i++)
+            {
+                //this image here, this there and this there. refresh and then wait for sometime. show random images randomly.do this ten times
+            }
 
             // check value of reel 1 with a switch statement to set appropriate image to
             // BackgroundImage property of pictureBox. Get images from Properties.Resources
