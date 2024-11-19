@@ -33,6 +33,58 @@ namespace OneArmedBandit
             for (int i = 0; i < 10; i++)
             {
                 //this image here, this there and this there. refresh and then wait for sometime. show random images randomly.do this ten times
+                // Generate random values for each reel during animation
+                int animReel1 = rangen.Next(1, 4);
+                int animReel2 = rangen.Next(1, 4);
+                int animReel3 = rangen.Next(1, 4);
+
+                // Set the random images for the animation
+                switch (animReel1)
+                {
+                    case 1:
+                        pictureBox1.BackgroundImage = Properties.Resources.cherry_100x125;
+                        break;
+                    case 2:
+                        pictureBox1.BackgroundImage = Properties.Resources.diamond_100x125;
+                        break;
+                    case 3:
+                        pictureBox1.BackgroundImage = Properties.Resources._7_100x125;
+                        break;
+                }
+
+                switch (animReel2)
+                {
+                    case 1:
+                        pictureBox2.BackgroundImage = Properties.Resources.cherry_100x125;
+                        break;
+                    case 2:
+                        pictureBox2.BackgroundImage = Properties.Resources.diamond_100x125;
+                        break;
+                    case 3:
+                        pictureBox2.BackgroundImage = Properties.Resources._7_100x125;
+                        break;
+                }
+
+                switch (animReel3)
+                {
+                    case 1:
+                        pictureBox3.BackgroundImage = Properties.Resources.cherry_100x125;
+                        break;
+                    case 2:
+                        pictureBox3.BackgroundImage = Properties.Resources.diamond_100x125;
+                        break;
+                    case 3:
+                        pictureBox3.BackgroundImage = Properties.Resources._7_100x125;
+                        break;
+                }
+
+                // Refresh the form to update the images
+                pictureBox1.Refresh();
+                pictureBox2.Refresh();
+                pictureBox3.Refresh();
+
+                // Pause for a short time to simulate animation
+                System.Threading.Thread.Sleep(100);
             }
 
             // check value of reel 1 with a switch statement to set appropriate image to
